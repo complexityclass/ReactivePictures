@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = configureWindow()
         assert(ConsumerKey != "no_key", "Please get your own api key from https://500px.com")
+        
 
         return true
     }
@@ -54,7 +55,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let window = UIWindow()
         window.frame = UIScreen.mainScreen().bounds
-        window.rootViewController = UINavigationController(rootViewController: GalleryViewController())
+        
+        let apiClient = ApiClient500Px()
+        apiClient.requestBuilder = RequestBuilder()
+        let galleryViewController = GalleryViewController()
+        galleryViewController.apiClient = apiClient
+        
+        window.rootViewController = UINavigationController(rootViewController: galleryViewController)
         window.backgroundColor = UIColor.whiteColor()
         window.makeKeyAndVisible()
 
