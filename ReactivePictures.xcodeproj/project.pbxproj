@@ -14,6 +14,7 @@
 		64A8225D1C8C318D00E1BA0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A8225C1C8C318D00E1BA0F /* Assets.xcassets */; };
 		64A822601C8C318D00E1BA0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A8225E1C8C318D00E1BA0F /* LaunchScreen.storyboard */; };
 		64A8226B1C8C318D00E1BA0F /* ReactivePicturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A8226A1C8C318D00E1BA0F /* ReactivePicturesTests.swift */; };
+		8AC885C40330135B92E0EB2B /* Pods_ReactivePictures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6DAE3B20018C10E2AEBE4D /* Pods_ReactivePictures.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 		64A822661C8C318D00E1BA0F /* ReactivePicturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactivePicturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A8226A1C8C318D00E1BA0F /* ReactivePicturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactivePicturesTests.swift; sourceTree = "<group>"; };
 		64A8226C1C8C318D00E1BA0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6DAE3B20018C10E2AEBE4D /* Pods_ReactivePictures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactivePictures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCB0749EA5BD326CF8A8A4B8 /* Pods-ReactivePictures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePictures.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePictures/Pods-ReactivePictures.release.xcconfig"; sourceTree = "<group>"; };
+		FB563EE051234E8757E8926F /* Pods-ReactivePictures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePictures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePictures/Pods-ReactivePictures.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC885C40330135B92E0EB2B /* Pods_ReactivePictures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		432DCA6D0623E7B9DBA90F46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC6DAE3B20018C10E2AEBE4D /* Pods_ReactivePictures.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48C005BACC162D5592FCF549 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB563EE051234E8757E8926F /* Pods-ReactivePictures.debug.xcconfig */,
+				CCB0749EA5BD326CF8A8A4B8 /* Pods-ReactivePictures.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		64A822461C8C318D00E1BA0F = {
 			isa = PBXGroup;
 			children = (
 				64A822511C8C318D00E1BA0F /* ReactivePictures */,
 				64A822691C8C318D00E1BA0F /* ReactivePicturesTests */,
 				64A822501C8C318D00E1BA0F /* Products */,
+				48C005BACC162D5592FCF549 /* Pods */,
+				432DCA6D0623E7B9DBA90F46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64A8226F1C8C318D00E1BA0F /* Build configuration list for PBXNativeTarget "ReactivePictures" */;
 			buildPhases = (
+				FB8E528E2CBA907E7BAC8DA4 /* Check Pods Manifest.lock */,
 				64A8224B1C8C318D00E1BA0F /* Sources */,
 				64A8224C1C8C318D00E1BA0F /* Frameworks */,
 				64A8224D1C8C318D00E1BA0F /* Resources */,
+				ADA68C4DA0BA4B84D5A64DCD /* Embed Pods Frameworks */,
+				F5E74049ABC69BF2253747BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +221,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ADA68C4DA0BA4B84D5A64DCD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactivePictures/Pods-ReactivePictures-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5E74049ABC69BF2253747BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactivePictures/Pods-ReactivePictures-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB8E528E2CBA907E7BAC8DA4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64A8224B1C8C318D00E1BA0F /* Sources */ = {
@@ -327,6 +402,7 @@
 		};
 		64A822701C8C318D00E1BA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB563EE051234E8757E8926F /* Pods-ReactivePictures.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReactivePictures/Info.plist;
@@ -338,6 +414,7 @@
 		};
 		64A822711C8C318D00E1BA0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB0749EA5BD326CF8A8A4B8 /* Pods-ReactivePictures.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReactivePictures/Info.plist;
@@ -390,6 +467,7 @@
 				64A822711C8C318D00E1BA0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64A822721C8C318D00E1BA0F /* Build configuration list for PBXNativeTarget "ReactivePicturesTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +476,7 @@
 				64A822741C8C318D00E1BA0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
