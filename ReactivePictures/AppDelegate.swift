@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        window = configureWindow()
+
         return true
     }
 
@@ -43,6 +46,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+
+    // MARK: Startup configuration
+
+    func configureWindow() -> UIWindow {
+
+        let window = UIWindow()
+        window.frame = UIScreen.mainScreen().bounds
+        window.rootViewController = UINavigationController(rootViewController: GalleryViewController())
+        window.backgroundColor = UIColor.whiteColor()
+        window.makeKeyAndVisible()
+
+        return window
+    }
+
 
     // MARK: - Core Data stack
 
