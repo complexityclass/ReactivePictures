@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ReactivePictures/Alamofire.framework"
+  install_framework "Pods-ReactivePictures/AlamofireImage.framework"
   install_framework "Pods-ReactivePictures/ReactiveCocoa.framework"
   install_framework "Pods-ReactivePictures/Result.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ReactivePictures/Alamofire.framework"
+  install_framework "Pods-ReactivePictures/AlamofireImage.framework"
   install_framework "Pods-ReactivePictures/ReactiveCocoa.framework"
   install_framework "Pods-ReactivePictures/Result.framework"
 fi

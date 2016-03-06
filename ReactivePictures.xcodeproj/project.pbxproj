@@ -30,6 +30,12 @@
 		64A8226B1C8C318D00E1BA0F /* ReactivePicturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A8226A1C8C318D00E1BA0F /* ReactivePicturesTests.swift */; };
 		64C094551C8C4F6E00147415 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C094541C8C4F6E00147415 /* Credentials.swift */; };
 		64C094561C8C4F6E00147415 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C094541C8C4F6E00147415 /* Credentials.swift */; };
+		64C094591C8C54EA00147415 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C094581C8C54EA00147415 /* PhotoModel.swift */; };
+		64C0945A1C8C54EA00147415 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C094581C8C54EA00147415 /* PhotoModel.swift */; };
+		64C0945D1C8C560E00147415 /* PhotoImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0945C1C8C560E00147415 /* PhotoImporter.swift */; };
+		64C0945E1C8C560E00147415 /* PhotoImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C0945C1C8C560E00147415 /* PhotoImporter.swift */; };
+		64C094611C8CC66000147415 /* ReactiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C094601C8CC66000147415 /* ReactiveCollectionViewCell.swift */; };
+		64C094621C8CC66000147415 /* ReactiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C094601C8CC66000147415 /* ReactiveCollectionViewCell.swift */; };
 		8AC885C40330135B92E0EB2B /* Pods_ReactivePictures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6DAE3B20018C10E2AEBE4D /* Pods_ReactivePictures.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +69,9 @@
 		64A8226A1C8C318D00E1BA0F /* ReactivePicturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactivePicturesTests.swift; sourceTree = "<group>"; };
 		64A8226C1C8C318D00E1BA0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64C094541C8C4F6E00147415 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		64C094581C8C54EA00147415 /* PhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		64C0945C1C8C560E00147415 /* PhotoImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoImporter.swift; sourceTree = "<group>"; };
+		64C094601C8CC66000147415 /* ReactiveCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC6DAE3B20018C10E2AEBE4D /* Pods_ReactivePictures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactivePictures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB0749EA5BD326CF8A8A4B8 /* Pods-ReactivePictures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePictures.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePictures/Pods-ReactivePictures.release.xcconfig"; sourceTree = "<group>"; };
 		FB563EE051234E8757E8926F /* Pods-ReactivePictures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePictures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePictures/Pods-ReactivePictures.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +99,7 @@
 		1872544AA8BC0215FFA2BF82 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				64C094571C8C54D600147415 /* Models */,
 				18725827627996609DFCE5A4 /* Controllers */,
 			);
 			path = Classes;
@@ -98,6 +108,7 @@
 		18725827627996609DFCE5A4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				64C0945F1C8CC63500147415 /* Cells */,
 				1872514F3AB4BE6D0044AC98 /* GalleryViewController.swift */,
 				18725EFB33463FB31B4C642C /* Layout */,
 			);
@@ -120,6 +131,7 @@
 		18725EA403DD231DC35BF81D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				64C0945B1C8C55F700147415 /* Photo importer */,
 				187258F2DBE3F4DF55DE3969 /* 500-px-api */,
 			);
 			path = Services;
@@ -193,6 +205,30 @@
 				64A8226C1C8C318D00E1BA0F /* Info.plist */,
 			);
 			path = ReactivePicturesTests;
+			sourceTree = "<group>";
+		};
+		64C094571C8C54D600147415 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64C094581C8C54EA00147415 /* PhotoModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		64C0945B1C8C55F700147415 /* Photo importer */ = {
+			isa = PBXGroup;
+			children = (
+				64C0945C1C8C560E00147415 /* PhotoImporter.swift */,
+			);
+			name = "Photo importer";
+			sourceTree = "<group>";
+		};
+		64C0945F1C8CC63500147415 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				64C094601C8CC66000147415 /* ReactiveCollectionViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,12 +383,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C094611C8CC66000147415 /* ReactiveCollectionViewCell.swift in Sources */,
 				64A822551C8C318D00E1BA0F /* ViewController.swift in Sources */,
+				64C0945D1C8C560E00147415 /* PhotoImporter.swift in Sources */,
 				64A822531C8C318D00E1BA0F /* AppDelegate.swift in Sources */,
 				64A8225B1C8C318D00E1BA0F /* ReactivePictures.xcdatamodeld in Sources */,
 				64C094551C8C4F6E00147415 /* Credentials.swift in Sources */,
 				187255D6DF168A5047C2A394 /* GalleryViewController.swift in Sources */,
 				187254B35A63ABE00D5C9ECE /* GalleryFlowLayout.swift in Sources */,
+				64C094591C8C54EA00147415 /* PhotoModel.swift in Sources */,
 				18725176B8D554C12EFB9F92 /* ApiClient500PxProtocol.swift in Sources */,
 				1872540177662B03C9971425 /* ApiClient500Px.swift in Sources */,
 				18725125EFF20FE5A0A368CB /* RequestBuilderProtocol.swift in Sources */,
@@ -373,7 +412,10 @@
 				1872580B1D4BAAA66D7459A8 /* ApiClient500Px.swift in Sources */,
 				187255933CF3245F8673E652 /* RequestBuilderProtocol.swift in Sources */,
 				18725BB7C5EE37FCE7B75F6E /* ApiEndpoitns500Px.swift in Sources */,
+				64C0945A1C8C54EA00147415 /* PhotoModel.swift in Sources */,
 				18725BE5C10AA461871CE95C /* RequestBuilder.swift in Sources */,
+				64C094621C8CC66000147415 /* ReactiveCollectionViewCell.swift in Sources */,
+				64C0945E1C8C560E00147415 /* PhotoImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
