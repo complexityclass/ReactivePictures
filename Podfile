@@ -6,6 +6,7 @@ use_frameworks!
 target 'ReactivePictures' do
 
 pod 'ReactiveCocoa', '4.0.4-alpha-4’
+pod 'Alamofire', '~> 3.0'
 
 end
 

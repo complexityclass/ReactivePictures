@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         window = configureWindow()
+        assert(ConsumerKey != "no_key", "Please get your own api key from https://500px.com")
 
         return true
     }
