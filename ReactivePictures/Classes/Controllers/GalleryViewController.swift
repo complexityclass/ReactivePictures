@@ -8,7 +8,7 @@ import ReactiveCocoa
 
 let CellReuseIdentifier = "ReactiveCell"
 
-class GalleryViewController : UICollectionViewController {
+class GalleryViewController : UICollectionViewController, FullSizeViewControllerDelegate {
     
     var photosArray = MutableProperty<[PhotoModel]>([])
     var apiClient: ApiClient500PxProtocol?
@@ -37,7 +37,7 @@ class GalleryViewController : UICollectionViewController {
         }
     }
     
-    // MARK: Collectionview delegates
+    // MARK: Collectionview data sources and delegates
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photosArray.value.count
@@ -50,5 +50,18 @@ class GalleryViewController : UICollectionViewController {
         
         return cell
     }
-
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let fullScreenViewController = FullsizePhotoViewController(photoModels: photosArray.value, currentPhotoIndex: indexPath.item)
+        fullScreenViewController.delegate = self
+        navigationController?.pushViewController(fullScreenViewController, animated: true)
+    }
+    
+    // MARK: Fullsize view controller delegate
+    
+    func userDidScroll(controller: UIViewController, toIndex index: Int) {
+        let toIndex = NSIndexPath.init(forItem: index, inSection: 0)
+        collectionView?.scrollToItemAtIndexPath(toIndex, atScrollPosition: .CenteredVertically, animated: false)
+    }
+    
 }
